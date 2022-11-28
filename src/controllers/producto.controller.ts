@@ -138,6 +138,7 @@ export class ProductoController {
     await this.productoRepository.replaceById(id, producto);
   }
 
+  @authenticate.skip()
   @del('/productos/{id}')
   @response(204, {
     description: 'Producto DELETE success',

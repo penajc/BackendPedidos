@@ -59,6 +59,7 @@ export class PersonaController {
   }
 
   //@authenticate("admin") // si no quiero que este usuario cree una persona
+  @authenticate.skip()
   @post('/personas')
   @response(200, {
     description: 'Persona model instance',
